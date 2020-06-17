@@ -17,7 +17,7 @@ class KittiDataset(torch.utils.data.Dataset):
         deeplab101.aux_classifier[4] = nn.Conv2d(256, 5, kernel_size=(1, 1), stride=(1, 1))
         for p in deeplab101.backbone.parameters():
             p.requires_grad = False
-        deeplab101.load_state_dict(torch.load('./deeplab_april8_20epochs.pth'))
+        deeplab101.load_state_dict(torch.load('./deeplab_20epochs.pth'))
         deeplab101 = deeplab101.to(self.device)
         deeplab101.eval()
         self.deeplab101 = deeplab101
