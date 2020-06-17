@@ -41,7 +41,7 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=1, aux_clas
                 optimizer.zero_grad()
 
                 with torch.set_grad_enabled(phase == 'train'):
-                    predicted_locs, predicted_scores = model(augmented_lidar_cam_coords)
+                    predicted_locs, predicted_scores, _ = model(augmented_lidar_cam_coords)
                     loss = criterion(predicted_locs, predicted_scores, boxes, classes)
                     
                     # backward + optimize only if in training phase
