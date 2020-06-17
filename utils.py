@@ -1,3 +1,5 @@
+import torch
+
 def xy_to_cxcy(xy):
     """
     Convert bounding boxes from boundary coordinates (x_min, y_min, x_max, y_max) to center-size coordinates (c_x, c_y, w, h).
