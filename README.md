@@ -21,6 +21,7 @@ python train.py
 python eval.py
 ```
 
-##To Do:
-[ ] Add data augmentation
-[ ] Add Focal Loss
+## To Do:
+- [ ] Add data augmentation
+- [ ] Add Focal Loss
+- [ ] Add rotation prediction
