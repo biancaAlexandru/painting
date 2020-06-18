@@ -1,6 +1,8 @@
 # painting
 Implementation of PointPainting
 
+![](prediction.png)
+
 Clone the repo
 
 Download the KITTI Dataset: 
