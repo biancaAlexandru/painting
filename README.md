@@ -4,7 +4,7 @@ An implementation of PointPainting (https://arxiv.org/abs/1911.10150), an image-
 ![](prediction.png)
 Above shows predicted (green) bounding boxes for an image and BEV map as well as ground truths (blue)
 
-
+## Installation and Training steps
 Clone the repo:
 ```
 git clone https://github.com/rshilliday/painting.git
