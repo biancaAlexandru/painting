@@ -60,7 +60,7 @@ valset = KittiDataset(root="/home/jovyan/work", mode="training", valid=True)
 datasets = {'train': trainset, 'val': valset}
 dataloaders_dict = {x: DataLoader(datasets[x], batch_size=4, shuffle=True, collate_fn=datasets[x].collate_fn, num_workers=0, drop_last=True) for x in ['train', 'val']}
 
-optimizer_ft = torch.optim.SGD(ssd.parameters(), lr=0.0001, momentum=0.9)# lr = 0.001 1st epoch, try decreasing after
+optimizer_ft = torch.optim.SGD(ssd.parameters(), lr=0.0001, momentum=0.9)
 criterion = MultiBoxLoss(priors_cxcy=ssd.priors_cxcy).to(device)
 
 ssd = train_model(ssd, dataloaders_dict, criterion, optimizer_ft, num_epochs=10)
