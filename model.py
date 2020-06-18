@@ -294,7 +294,7 @@ class SSD(nn.Module):
 
                 # A torch.uint8 (byte) tensor to keep track of which predicted boxes to suppress
                 # 1 implies suppress, 0 implies don't suppress
-                suppress = torch.zeros((n_above_min_score), dtype=torch.uint8).to(device)  # (n_qualified)
+                suppress = torch.max(suppress, (overlap[box] > max_overlap).type(torch.cuda.ByteTensor))  # (n_qualified)
 
                 # Consider each box in order of decreasing scores
                 for box in range(class_decoded_locs.size(0)):
