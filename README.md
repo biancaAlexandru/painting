@@ -12,7 +12,7 @@ cd painting
 pip install requirements.txt
 ```
 Download and unzip the [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=bev) (images, lidar, labels, calib)
-[Download](https://drive.google.com/file/d/1nqSDmTx97Y23j7L3Wca5hPudxXp57A7J/view?usp=sharing) and save weights for the semantic segmentation network
+Also download and save [weights](https://drive.google.com/file/d/1nqSDmTx97Y23j7L3Wca5hPudxXp57A7J/view?usp=sharing) for the semantic segmentation network
 
 Train and evaluate the network:
 ```
