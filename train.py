@@ -3,7 +3,7 @@ import copy
 from model import SSD, MultiBoxLoss
 from dataset import KittiDataset
 
-def train_model(model, dataloaders, criterion, optimizer, num_epochs=1, aux_class=False):
+def train_model(model, dataloaders, criterion, optimizer, num_epochs=1):
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     since = time.time()
     val_acc_history = []
