@@ -20,7 +20,7 @@ python train.py
 python eval.py
 ```
 
-## To Do:
+## Future Work:
 - [ ] Add data augmentation
 - [ ] Add Focal Loss
 - [ ] Add rotation prediction
